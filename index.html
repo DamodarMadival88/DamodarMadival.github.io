@@ -1,103 +1,115 @@
 <style>
+    :root {
+        --bg-main: #020617;
+        --bg-card: rgba(15, 23, 42, 0.85);
+        --accent: #38bdf8;
+        --text-main: #e5e7eb;
+        --text-muted: #94a3b8;
+        --border-soft: rgba(56,189,248,0.25);
+    }
+
     body {
-        font-family: 'Segoe UI', Arial, sans-serif;
+        font-family: 'Segoe UI', system-ui, sans-serif;
         margin: 0;
-        background: radial-gradient(circle at top, #020617, #000);
-        color: #e5e7eb;
-        line-height: 1.6;
+        background: linear-gradient(180deg, #020617 0%, #000 100%);
+        color: var(--text-main);
+        line-height: 1.7;
     }
 
     header {
-        background: linear-gradient(135deg, #020617, #020617);
-        padding: 50px 20px;
+        padding: 70px 20px 60px;
         text-align: center;
-        border-bottom: 1px solid #1e293b;
+        background:
+            radial-gradient(circle at top, rgba(56,189,248,0.15), transparent 60%),
+            var(--bg-main);
     }
 
     header img {
         width: 150px;
         height: 150px;
         border-radius: 50%;
-        border: 3px solid #38bdf8;
-        box-shadow: 0 0 20px rgba(56,189,248,0.6);
-        transition: transform 0.3s;
-    }
-
-    header img:hover {
-        transform: scale(1.05);
+        border: 2px solid var(--accent);
+        background: #020617;
     }
 
     header h1 {
-        margin: 20px 0 8px;
-        font-size: 32px;
-        color: #38bdf8;
-        letter-spacing: 1px;
+        margin: 22px 0 6px;
+        font-size: 34px;
+        font-weight: 600;
+        letter-spacing: 0.6px;
     }
 
     header p {
-        color: #94a3b8;
         font-size: 16px;
+        color: var(--text-muted);
+        max-width: 700px;
+        margin: auto;
     }
 
     .btn {
         display: inline-block;
-        margin-top: 20px;
-        padding: 12px 22px;
-        background: linear-gradient(135deg, #38bdf8, #0ea5e9);
-        color: #020617;
+        margin-top: 28px;
+        padding: 12px 28px;
+        background: transparent;
+        color: var(--accent);
+        border: 1px solid var(--accent);
         border-radius: 8px;
-        font-weight: bold;
-        text-decoration: none;
-        box-shadow: 0 0 15px rgba(56,189,248,0.6);
-        transition: all 0.3s ease;
+        font-weight: 600;
+        transition: all 0.25s ease;
     }
 
     .btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 0 25px rgba(56,189,248,0.9);
+        background: var(--accent);
+        color: #020617;
     }
 
     section {
-        padding: 50px 20px;
-        max-width: 1000px;
+        max-width: 1100px;
         margin: auto;
+        padding: 60px 20px;
     }
 
     h2 {
-        color: #38bdf8;
-        border-left: 4px solid #38bdf8;
-        padding-left: 12px;
-        margin-bottom: 20px;
-        text-transform: uppercase;
-        font-size: 20px;
-        letter-spacing: 1px;
+        font-size: 22px;
+        font-weight: 600;
+        margin-bottom: 30px;
+        position: relative;
+        padding-bottom: 10px;
+    }
+
+    h2::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 60px;
+        height: 2px;
+        background: var(--accent);
     }
 
     .card {
-        background: rgba(2, 6, 23, 0.9);
-        padding: 22px;
-        border-radius: 12px;
-        margin-top: 18px;
-        border: 1px solid #1e293b;
-        box-shadow: 0 0 12px rgba(15,23,42,0.8);
+        background: var(--bg-card);
+        border-radius: 14px;
+        padding: 26px;
+        margin-bottom: 22px;
+        border: 1px solid var(--border-soft);
+        backdrop-filter: blur(8px);
     }
 
     .skills span {
         display: inline-block;
-        background: linear-gradient(135deg, #1e293b, #020617);
-        padding: 9px 14px;
+        padding: 8px 16px;
         margin: 6px;
-        border-radius: 25px;
+        border-radius: 20px;
+        background: rgba(56,189,248,0.08);
+        border: 1px solid var(--border-soft);
         font-size: 14px;
-        border: 1px solid #38bdf8;
-        color: #e5e7eb;
-        box-shadow: 0 0 8px rgba(56,189,248,0.3);
+        color: var(--text-main);
     }
 
     a {
-        color: #38bdf8;
+        color: var(--accent);
         text-decoration: none;
-        font-weight: 500;
     }
 
     a:hover {
@@ -106,117 +118,10 @@
 
     footer {
         text-align: center;
-        padding: 25px;
+        padding: 30px 20px;
         background: #020617;
         color: #64748b;
-        border-top: 1px solid #1e293b;
         font-size: 14px;
+        border-top: 1px solid rgba(255,255,255,0.06);
     }
 </style>
-</head>
-<body>
-
-<header>
-    <!-- CHANGE IMAGE NAME IF NEEDED -->
-    <img src="profile.jpg" alt="Profile Photo">
-
-    <!-- EDIT NAME -->
-    <h1>Your Name</h1>
-
-    <!-- SOC-ALIGNED TITLE -->
-    <p>SOC Analyst (Tier 1) Aspirant | Cybersecurity Graduate</p>
-
-    <!-- RESUME BUTTON -->
-    <a class="btn" href="resume.pdf" target="_blank">Download Resume</a>
-</header>
-
-<section>
-    <h2>Professional Summary</h2>
-    <p>
-        Entry-level cybersecurity professional and BCA graduate with a strong interest in
-        Security Operations Center (SOC) operations. Hands-on experience in log analysis,
-        phishing detection, network traffic monitoring, and security fundamentals.
-        Actively developing skills in SIEM monitoring, incident triage, and alert analysis.
-        Seeking an opportunity as a SOC Analyst (Tier 1) to support threat detection
-        and incident response operations.
-    </p>
-</section>
-
-<section>
-    <h2>Technical Skills</h2>
-    <div class="skills">
-        <span>Security Operations Center (SOC)</span>
-        <span>SIEM Fundamentals</span>
-        <span>Log Analysis</span>
-        <span>Incident Triage</span>
-        <span>Phishing Analysis</span>
-        <span>Network Traffic Analysis</span>
-        <span>Wireshark</span>
-        <span>Linux Basics</span>
-        <span>TCP/IP & DNS</span>
-        <span>Burp Suite</span>
-        <span>OWASP Top 10</span>
-        <span>Cybersecurity Fundamentals</span>
-    </div>
-</section>
-
-<section>
-    <h2>Projects & Hands-On Experience</h2>
-
-    <div class="card">
-        <h3>Phishing Awareness & Analysis Project</h3>
-        <p>
-            Analyzed common phishing techniques and attacker tactics used to exploit
-            user behavior. Focused on identifying indicators of compromise (IOCs),
-            understanding social engineering methods, and recommending security
-            awareness controls from a SOC perspective.
-        </p>
-    </div>
-
-    <div class="card">
-        <h3>Network Traffic Analysis Using Wireshark</h3>
-        <p>
-            Captured and analyzed network packets to identify suspicious traffic patterns,
-            protocols, and potential security anomalies. Gained hands-on experience
-            with HTTP, DNS, TCP/IP, and basic threat indicators.
-        </p>
-    </div>
-
-</section>
-
-<section>
-    <h2>Certifications & Training</h2>
-
-    <div class="card">
-        <ul>
-            <li>Introduction to Cybersecurity – Cisco Networking Academy</li>
-            <li>Network Security Fundamentals</li>
-            <li>SIEM & SOC Basics (Hands-on Labs)</li>
-            <li>Web Application Security (OWASP Top 10)</li>
-        </ul>
-    </div>
-
-</section>
-
-<section>
-    <h2>GitHub & Learning Labs</h2>
-    <p>
-        🔗 <a href="https://github.com/yourusername" target="_blank">
-            https://github.com/yourusername
-        </a><br>
-        (Includes security labs, notes, and hands-on practice related to SOC concepts)
-    </p>
-</section>
-
-<section>
-    <h2>Contact</h2>
-    <p>Email: yourmail@example.com</p>
-    <p>Location: Vasco, Goa</p>
-</section>
-
-<footer>
-    © 2025 Your Name | SOC Analyst Portfolio
-</footer>
-
-</body>
-</html>
