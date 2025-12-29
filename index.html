@@ -1,89 +1,118 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Your Name | SOC Analyst Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    body {
+        font-family: 'Segoe UI', Arial, sans-serif;
+        margin: 0;
+        background: radial-gradient(circle at top, #020617, #000);
+        color: #e5e7eb;
+        line-height: 1.6;
+    }
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: #0f172a;
-            color: #e5e7eb;
-        }
+    header {
+        background: linear-gradient(135deg, #020617, #020617);
+        padding: 50px 20px;
+        text-align: center;
+        border-bottom: 1px solid #1e293b;
+    }
 
-        header {
-            background: #020617;
-            padding: 40px 20px;
-            text-align: center;
-        }
+    header img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 3px solid #38bdf8;
+        box-shadow: 0 0 20px rgba(56,189,248,0.6);
+        transition: transform 0.3s;
+    }
 
-        header img {
-            width: 140px;
-            height: 140px;
-            border-radius: 50%;
-            border: 3px solid #38bdf8;
-        }
+    header img:hover {
+        transform: scale(1.05);
+    }
 
-        header h1 {
-            margin: 15px 0 5px;
-        }
+    header h1 {
+        margin: 20px 0 8px;
+        font-size: 32px;
+        color: #38bdf8;
+        letter-spacing: 1px;
+    }
 
-        header p {
-            color: #94a3b8;
-        }
+    header p {
+        color: #94a3b8;
+        font-size: 16px;
+    }
 
-        .btn {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 10px 18px;
-            background: #38bdf8;
-            color: #020617;
-            border-radius: 6px;
-            font-weight: bold;
-        }
+    .btn {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 12px 22px;
+        background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+        color: #020617;
+        border-radius: 8px;
+        font-weight: bold;
+        text-decoration: none;
+        box-shadow: 0 0 15px rgba(56,189,248,0.6);
+        transition: all 0.3s ease;
+    }
 
-        section {
-            padding: 40px 20px;
-            max-width: 900px;
-            margin: auto;
-        }
+    .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 0 25px rgba(56,189,248,0.9);
+    }
 
-        h2 {
-            border-bottom: 2px solid #38bdf8;
-            display: inline-block;
-            padding-bottom: 5px;
-        }
+    section {
+        padding: 50px 20px;
+        max-width: 1000px;
+        margin: auto;
+    }
 
-        .skills span {
-            display: inline-block;
-            background: #1e293b;
-            padding: 8px 12px;
-            margin: 6px;
-            border-radius: 20px;
-            font-size: 14px;
-        }
+    h2 {
+        color: #38bdf8;
+        border-left: 4px solid #38bdf8;
+        padding-left: 12px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
 
-        .card {
-            background: #020617;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 15px;
-        }
+    .card {
+        background: rgba(2, 6, 23, 0.9);
+        padding: 22px;
+        border-radius: 12px;
+        margin-top: 18px;
+        border: 1px solid #1e293b;
+        box-shadow: 0 0 12px rgba(15,23,42,0.8);
+    }
 
-        a {
-            color: #38bdf8;
-            text-decoration: none;
-        }
+    .skills span {
+        display: inline-block;
+        background: linear-gradient(135deg, #1e293b, #020617);
+        padding: 9px 14px;
+        margin: 6px;
+        border-radius: 25px;
+        font-size: 14px;
+        border: 1px solid #38bdf8;
+        color: #e5e7eb;
+        box-shadow: 0 0 8px rgba(56,189,248,0.3);
+    }
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #020617;
-            color: #64748b;
-        }
-    </style>
+    a {
+        color: #38bdf8;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    footer {
+        text-align: center;
+        padding: 25px;
+        background: #020617;
+        color: #64748b;
+        border-top: 1px solid #1e293b;
+        font-size: 14px;
+    }
+</style>
 </head>
 <body>
 
