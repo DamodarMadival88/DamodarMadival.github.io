@@ -1,127 +1,189 @@
-<style>
-    :root {
-        --bg-main: #020617;
-        --bg-card: rgba(15, 23, 42, 0.85);
-        --accent: #38bdf8;
-        --text-main: #e5e7eb;
-        --text-muted: #94a3b8;
-        --border-soft: rgba(56,189,248,0.25);
-    }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Damodar Madival | SOC Analyst Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    body {
-        font-family: 'Segoe UI', system-ui, sans-serif;
-        margin: 0;
-        background: linear-gradient(180deg, #020617 0%, #000 100%);
-        color: var(--text-main);
-        line-height: 1.7;
-    }
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f8fafc;
+            color: #0f172a;
+        }
 
-    header {
-        padding: 70px 20px 60px;
-        text-align: center;
-        background:
-            radial-gradient(circle at top, rgba(56,189,248,0.15), transparent 60%),
-            var(--bg-main);
-    }
+        header {
+            background: #ffffff;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 1px solid #e5e7eb;
+        }
 
-    header img {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        border: 2px solid var(--accent);
-        background: #020617;
-    }
+        header img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 3px solid #2563eb;
+        }
 
-    header h1 {
-        margin: 22px 0 6px;
-        font-size: 34px;
-        font-weight: 600;
-        letter-spacing: 0.6px;
-    }
+        header h1 {
+            margin: 15px 0 5px;
+        }
 
-    header p {
-        font-size: 16px;
-        color: var(--text-muted);
-        max-width: 700px;
-        margin: auto;
-    }
+        header p {
+            color: #475569;
+        }
 
-    .btn {
-        display: inline-block;
-        margin-top: 28px;
-        padding: 12px 28px;
-        background: transparent;
-        color: var(--accent);
-        border: 1px solid var(--accent);
-        border-radius: 8px;
-        font-weight: 600;
-        transition: all 0.25s ease;
-    }
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 18px;
+            background: #2563eb;
+            color: #ffffff;
+            border-radius: 6px;
+            font-weight: bold;
+        }
 
-    .btn:hover {
-        background: var(--accent);
-        color: #020617;
-    }
+        section {
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
 
-    section {
-        max-width: 1100px;
-        margin: auto;
-        padding: 60px 20px;
-    }
+        h2 {
+            border-bottom: 2px solid #2563eb;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
 
-    h2 {
-        font-size: 22px;
-        font-weight: 600;
-        margin-bottom: 30px;
-        position: relative;
-        padding-bottom: 10px;
-    }
+        .skills span {
+            display: inline-block;
+            background: #e5e7eb;
+            padding: 8px 12px;
+            margin: 6px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
 
-    h2::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 60px;
-        height: 2px;
-        background: var(--accent);
-    }
+        .card {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 15px;
+            border: 1px solid #e5e7eb;
+        }
 
-    .card {
-        background: var(--bg-card);
-        border-radius: 14px;
-        padding: 26px;
-        margin-bottom: 22px;
-        border: 1px solid var(--border-soft);
-        backdrop-filter: blur(8px);
-    }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
 
-    .skills span {
-        display: inline-block;
-        padding: 8px 16px;
-        margin: 6px;
-        border-radius: 20px;
-        background: rgba(56,189,248,0.08);
-        border: 1px solid var(--border-soft);
-        font-size: 14px;
-        color: var(--text-main);
-    }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #ffffff;
+            border-top: 1px solid #e5e7eb;
+            color: #475569;
+        }
+    </style>
+</head>
+<body>
 
-    a {
-        color: var(--accent);
-        text-decoration: none;
-    }
+<header>
+    <img src="profile.jpg" alt="Profile Photo">
 
-    a:hover {
-        text-decoration: underline;
-    }
+    <h1>Damodar Madival</h1>
+    <p>SOC Analyst (Tier 1) Aspirant | Cybersecurity Graduate</p>
 
-    footer {
-        text-align: center;
-        padding: 30px 20px;
-        background: #020617;
-        color: #64748b;
-        font-size: 14px;
-        border-top: 1px solid rgba(255,255,255,0.06);
-    }
-</style>
+    <a class="btn" href="resume.pdf" target="_blank">Download Resume</a>
+</header>
+
+<section>
+    <h2>Professional Summary</h2>
+    <p>
+        Entry-level cybersecurity professional and BCA graduate with a strong interest in
+        Security Operations Center (SOC) operations. Hands-on experience in log analysis,
+        phishing detection, network traffic monitoring, and security fundamentals.
+        Actively developing skills in SIEM monitoring, incident triage, and alert analysis.
+        Seeking an opportunity as a SOC Analyst (Tier 1) to support threat detection
+        and incident response operations.
+    </p>
+</section>
+
+<section>
+    <h2>Technical Skills</h2>
+    <div class="skills">
+        <span>SOC Operations</span>
+        <span>SIEM Fundamentals</span>
+        <span>Log Analysis</span>
+        <span>Incident Triage</span>
+        <span>Phishing Analysis</span>
+        <span>Network Traffic Analysis</span>
+        <span>Wireshark</span>
+        <span>Linux Basics</span>
+        <span>TCP/IP & DNS</span>
+        <span>Burp Suite</span>
+        <span>OWASP Top 10</span>
+    </div>
+</section>
+
+<section>
+    <h2>Projects & Hands-On Experience</h2>
+
+    <div class="card">
+        <h3>Phishing Awareness & Analysis Project</h3>
+        <p>
+            Studied phishing techniques and social engineering tactics used by attackers.
+            Identified indicators of compromise (IOCs) and focused on user awareness
+            and preventive controls from a SOC monitoring perspective.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Network Traffic Analysis Using Wireshark</h3>
+        <p>
+            Captured and analyzed network packets to identify suspicious traffic patterns,
+            protocols, and anomalies. Gained hands-on experience with HTTP, DNS,
+            TCP/IP, and basic threat indicators.
+        </p>
+    </div>
+
+</section>
+
+<section>
+    <h2>Certifications & Training</h2>
+
+    <div class="card">
+        <ul>
+            <li>Introduction to Cybersecurity – Cisco Networking Academy</li>
+            <li>Network Security Fundamentals</li>
+            <li>SIEM & SOC Basics (Hands-on Practice)</li>
+            <li>Web Application Security – OWASP Top 10</li>
+        </ul>
+    </div>
+
+</section>
+
+<section>
+    <h2>GitHub & Learning Labs</h2>
+    <p>
+        🔗 <a href="https://github.com/DamodarMadival88" target="_blank">
+            https://github.com/DamodarMadival88
+        </a><br>
+        (Includes SOC labs, security notes, and hands-on practice)
+    </p>
+</section>
+
+<section>
+    <h2>Contact</h2>
+    <p>Email: yourmail@example.com</p>
+    <p>Location: Vasco, Goa</p>
+</section>
+
+<footer>
+    © 2025 Damodar Madival | SOC Analyst Portfolio
+</footer>
+
+</body>
+</html>
