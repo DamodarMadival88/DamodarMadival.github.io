@@ -5,51 +5,69 @@
 <title>Damodar Madival | SOC Analyst Portfolio</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Fonts & Icons -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
 :root{
-  --bg:#f8fafc;
+  --bg:#f1f5f9;
   --text:#0f172a;
-  --card:#ffffff;
+  --card:rgba(255,255,255,0.85);
   --accent:#2563eb;
+  --accent2:#06b6d4;
 }
 body.dark{
-  --bg:#0f172a;
+  --bg:#020617;
   --text:#e5e7eb;
-  --card:#020617;
+  --card:rgba(15,23,42,0.9);
   --accent:#38bdf8;
+  --accent2:#22d3ee;
 }
 
 html{scroll-behavior:smooth;}
 body{
   margin:0;
   font-family:'Poppins',sans-serif;
-  background:var(--bg);
   color:var(--text);
+  background:
+    linear-gradient(120deg,var(--accent),var(--accent2));
+  min-height:100vh;
+}
+
+/* GLASS BACKGROUND LAYER */
+.main{
+  background:var(--bg);
+  margin:12px;
+  border-radius:14px;
+  overflow:hidden;
 }
 
 /* NAVBAR */
 header{
   position:fixed;
-  top:0; width:100%;
+  top:12px;
+  left:12px;
+  right:12px;
   background:var(--card);
-  box-shadow:0 2px 8px rgba(0,0,0,.08);
+  backdrop-filter:blur(12px);
+  border-radius:12px;
+  box-shadow:0 10px 30px rgba(0,0,0,.15);
   z-index:1000;
 }
 nav{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:15px 30px;
+  padding:14px 26px;
 }
 .nav-links a{
-  margin:0 12px;
+  margin:0 14px;
   text-decoration:none;
   color:var(--text);
   font-weight:500;
+}
+.nav-links a:hover{
+  color:var(--accent);
 }
 .toggle-btn{
   cursor:pointer;
@@ -64,95 +82,115 @@ nav{
 /* HERO */
 .hero{
   text-align:center;
-  padding:120px 20px 80px;
+  padding:140px 20px 90px;
+  background:
+    radial-gradient(circle at top,var(--accent2),transparent 60%);
 }
-.hero h1{font-size:34px;}
+.hero h1{
+  font-size:38px;
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  -webkit-background-clip:text;
+  color:transparent;
+}
 .hero p{color:#64748b;}
 .btn{
   display:inline-block;
-  margin-top:12px;
-  background:var(--accent);
+  margin-top:16px;
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
   color:white;
-  padding:12px 22px;
-  border-radius:6px;
+  padding:14px 26px;
+  border-radius:30px;
   text-decoration:none;
   font-weight:600;
+  box-shadow:0 8px 20px rgba(0,0,0,.25);
 }
 
 /* SECTIONS */
 section{
   max-width:1000px;
   margin:auto;
-  padding:60px 20px;
+  padding:70px 20px;
   opacity:0;
-  transform:translateY(40px);
-  transition:all .7s ease;
+  transform:translateY(50px);
+  transition:all .8s ease;
 }
 section.show{
   opacity:1;
   transform:translateY(0);
 }
 h2{
-  border-bottom:3px solid var(--accent);
-  display:inline-block;
-  padding-bottom:5px;
+  text-align:center;
+  font-size:28px;
+  margin-bottom:30px;
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  -webkit-background-clip:text;
+  color:transparent;
 }
 
 /* SKILLS */
 .skills{
   display:flex;
   flex-wrap:wrap;
-  gap:15px;
+  gap:20px;
   justify-content:center;
 }
 .skill{
-  width:120px;
+  width:130px;
   text-align:center;
+  padding:20px;
+  background:var(--card);
+  border-radius:12px;
+  backdrop-filter:blur(10px);
+  box-shadow:0 6px 18px rgba(0,0,0,.15);
 }
 .skill i{
-  font-size:28px;
+  font-size:32px;
   color:var(--accent);
 }
 
 /* CARDS */
 .cards{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:20px;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:24px;
 }
 .card{
   background:var(--card);
-  padding:18px;
-  border-radius:8px;
-  box-shadow:0 2px 8px rgba(0,0,0,.08);
+  padding:22px;
+  border-radius:14px;
+  backdrop-filter:blur(12px);
+  box-shadow:0 8px 24px rgba(0,0,0,.2);
 }
 
 /* FOOTER */
 footer{
   text-align:center;
-  padding:20px;
+  padding:26px;
   background:var(--card);
-  border-top:1px solid #e5e7eb;
+  backdrop-filter:blur(10px);
 }
 
 /* MOBILE */
 @media(max-width:768px){
   .nav-links{
     position:absolute;
-    top:60px; left:0;
+    top:70px;
+    left:0;
     background:var(--card);
     width:100%;
     display:none;
     flex-direction:column;
     text-align:center;
+    border-radius:0 0 14px 14px;
   }
-  .nav-links a{padding:12px 0;}
+  .nav-links a{padding:14px 0;}
   .menu{display:block;}
 }
 </style>
 </head>
 
 <body>
+<div class="main">
 
 <header>
   <nav>
@@ -164,7 +202,7 @@ footer{
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </div>
-    <div class="toggle-btn" onclick="toggleTheme()">🌙</div>
+    <div class="toggle-btn" onclick="toggleTheme()">🌗</div>
   </nav>
 </header>
 
@@ -178,19 +216,18 @@ footer{
   <h2>About Me</h2>
   <p>
     Entry-level cybersecurity professional with hands-on exposure to SOC operations,
-    SIEM basics, phishing analysis, log review, and network traffic monitoring.
-    Actively preparing for SOC Analyst Tier-1 roles.
+    SIEM monitoring, phishing analysis, log review, and network traffic inspection.
   </p>
 </section>
 
 <section id="skills">
   <h2>Skills</h2>
   <div class="skills">
-    <div class="skill"><i class="fa fa-shield"></i><br>SOC</div>
+    <div class="skill"><i class="fa fa-shield"></i><br>SOC Monitoring</div>
     <div class="skill"><i class="fa fa-search"></i><br>SIEM</div>
     <div class="skill"><i class="fa fa-network-wired"></i><br>Networking</div>
     <div class="skill"><i class="fa fa-wifi"></i><br>Wireshark</div>
-    <div class="skill"><i class="fa fa-bug"></i><br>IR</div>
+    <div class="skill"><i class="fa fa-bug"></i><br>Incident Response</div>
     <div class="skill"><i class="fa fa-code"></i><br>OWASP</div>
   </div>
 </section>
@@ -200,11 +237,11 @@ footer{
   <div class="cards">
     <div class="card">
       <h3>Phishing Awareness Project</h3>
-      <p>Analyzed phishing techniques and documented IOCs and prevention strategies.</p>
+      <p>Studied phishing techniques, analyzed indicators of compromise, and documented prevention strategies.</p>
     </div>
     <div class="card">
       <h3>Wireshark Traffic Analysis</h3>
-      <p>Captured and analyzed suspicious traffic patterns and protocols.</p>
+      <p>Captured and analyzed network traffic to identify suspicious patterns.</p>
     </div>
   </div>
 </section>
@@ -220,6 +257,8 @@ footer{
   © 2025 Damodar Madival | SOC Analyst Portfolio
 </footer>
 
+</div>
+
 <script>
 function toggleTheme(){
   document.body.classList.toggle("dark");
@@ -233,7 +272,7 @@ function toggleMenu(){
 const sections=document.querySelectorAll("section");
 window.addEventListener("scroll",()=>{
   sections.forEach(sec=>{
-    if(sec.getBoundingClientRect().top < window.innerHeight-100){
+    if(sec.getBoundingClientRect().top < window.innerHeight-120){
       sec.classList.add("show");
     }
   });
