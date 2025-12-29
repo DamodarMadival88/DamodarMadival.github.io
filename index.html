@@ -1,194 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Damodar Madival | SOC Analyst Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Damodar Madival | SOC Analyst Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Font & icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<!-- Fonts & Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            background: #f8fafc;
-            color: #0f172a;
-            scroll-behavior: smooth;
-        }
-        header {
-            background: white;
-            box-shadow: 0px 2px 8px rgba(0,0,0,0.06);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 100;
-        }
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 40px;
-        }
-        nav a {
-            text-decoration: none;
-            margin: 0 12px;
-            font-weight: 500;
-            color: #0f172a;
-        }
-        .hero {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            padding: 100px 20px;
-            margin-top: 60px;
-        }
-        .hero h1 { font-size: 32px; font-weight: 700; }
-        .hero p { font-size: 18px; color: #475569; margin: 6px 0; }
-        .btn-resume {
-            background: #2563eb;
-            color: white;
-            padding: 12px 20px;
-            border-radius: 6px;
-            font-weight: bold;
-            text-decoration: none;
-            margin-top: 12px;
-        }
-        section {
-            padding: 60px 20px;
-            max-width: 1000px;
-            margin: auto;
-        }
-        section h2 {
-            font-size: 24px;
-            border-bottom: 3px solid #2563eb;
-            display: inline-block;
-            margin-bottom: 16px;
-        }
-        .skills-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 14px;
-            justify-content: center;
-        }
-        .skills-grid div {
-            width: 120px;
-            text-align: center;
-            font-size: 14px;
-            color: #0f172a;
-        }
-        .skills-grid div i {
-            font-size: 28px;
-            color: #2563eb;
-            margin-bottom: 6px;
-        }
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
-            gap: 20px;
-        }
-        .card {
-            background: white;
-            border-radius: 8px;
-            padding: 16px;
-            box-shadow: 0px 2px 8px rgba(0,0,0,0.08);
-        }
-        .card h3 { margin: 10px 0; }
-        .contact-info p {
-            margin: 6px 0;
-        }
-        footer {
-            text-align: center;
-            padding: 16px;
-            background: #ffffff;
-            border-top: 1px solid #e5e7eb;
-            margin-top: 40px;
-            color: #475569;
-        }
-    </style>
+<style>
+:root{
+  --bg:#f8fafc;
+  --text:#0f172a;
+  --card:#ffffff;
+  --accent:#2563eb;
+}
+body.dark{
+  --bg:#0f172a;
+  --text:#e5e7eb;
+  --card:#020617;
+  --accent:#38bdf8;
+}
+
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+
+/* NAVBAR */
+header{
+  position:fixed;
+  top:0; width:100%;
+  background:var(--card);
+  box-shadow:0 2px 8px rgba(0,0,0,.08);
+  z-index:1000;
+}
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 30px;
+}
+.nav-links a{
+  margin:0 12px;
+  text-decoration:none;
+  color:var(--text);
+  font-weight:500;
+}
+.toggle-btn{
+  cursor:pointer;
+  font-size:18px;
+}
+.menu{
+  display:none;
+  font-size:22px;
+  cursor:pointer;
+}
+
+/* HERO */
+.hero{
+  text-align:center;
+  padding:120px 20px 80px;
+}
+.hero h1{font-size:34px;}
+.hero p{color:#64748b;}
+.btn{
+  display:inline-block;
+  margin-top:12px;
+  background:var(--accent);
+  color:white;
+  padding:12px 22px;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:600;
+}
+
+/* SECTIONS */
+section{
+  max-width:1000px;
+  margin:auto;
+  padding:60px 20px;
+  opacity:0;
+  transform:translateY(40px);
+  transition:all .7s ease;
+}
+section.show{
+  opacity:1;
+  transform:translateY(0);
+}
+h2{
+  border-bottom:3px solid var(--accent);
+  display:inline-block;
+  padding-bottom:5px;
+}
+
+/* SKILLS */
+.skills{
+  display:flex;
+  flex-wrap:wrap;
+  gap:15px;
+  justify-content:center;
+}
+.skill{
+  width:120px;
+  text-align:center;
+}
+.skill i{
+  font-size:28px;
+  color:var(--accent);
+}
+
+/* CARDS */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+}
+.card{
+  background:var(--card);
+  padding:18px;
+  border-radius:8px;
+  box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:20px;
+  background:var(--card);
+  border-top:1px solid #e5e7eb;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .nav-links{
+    position:absolute;
+    top:60px; left:0;
+    background:var(--card);
+    width:100%;
+    display:none;
+    flex-direction:column;
+    text-align:center;
+  }
+  .nav-links a{padding:12px 0;}
+  .menu{display:block;}
+}
+</style>
 </head>
+
 <body>
 
 <header>
-    <nav>
-        <div>
-            <a href="#hero">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </nav>
+  <nav>
+    <div class="menu" onclick="toggleMenu()">☰</div>
+    <div class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="toggle-btn" onclick="toggleTheme()">🌙</div>
+  </nav>
 </header>
 
-<div id="hero" class="hero">
-    <h1>Damodar Madival</h1>
-    <p>SOC Analyst (Tier 1) Aspirant | Cybersecurity Professional</p>
-    <a class="btn-resume" href="resume.pdf" target="_blank"><i class="fa fa-download"></i> Download Resume</a>
+<div id="home" class="hero">
+  <h1>Damodar Madival</h1>
+  <p>SOC Analyst (Tier-1) Aspirant | Cybersecurity Graduate</p>
+  <a class="btn" href="resume.pdf" target="_blank">Download Resume</a>
 </div>
 
 <section id="about">
-    <h2>About Me</h2>
-    <p>
-        I’m a BCA graduate and cybersecurity enthusiast focusing on SOC operations,
-        SIEM analysis, incident triage, network monitoring, and log investigations.
-        I’m actively learning real-world SOC tools and ready for Tier-1 SOC Analyst opportunities.
-    </p>
+  <h2>About Me</h2>
+  <p>
+    Entry-level cybersecurity professional with hands-on exposure to SOC operations,
+    SIEM basics, phishing analysis, log review, and network traffic monitoring.
+    Actively preparing for SOC Analyst Tier-1 roles.
+  </p>
 </section>
 
 <section id="skills">
-    <h2>Skills</h2>
-    <div class="skills-grid">
-        <div><i class="fa fa-network-wired"></i><br>Networking</div>
-        <div><i class="fa fa-terminal"></i><br>Linux</div>
-        <div><i class="fa fa-shield-alt"></i><br>SIEM</div>
-        <div><i class="fa fa-search"></i><br>Log Analysis</div>
-        <div><i class="fa fa-wifi"></i><br>Wireshark</div>
-        <div><i class="fa fa-bug"></i><br>Incident Triage</div>
-        <div><i class="fa fa-code"></i><br>OWASP Top 10</div>
-    </div>
+  <h2>Skills</h2>
+  <div class="skills">
+    <div class="skill"><i class="fa fa-shield"></i><br>SOC</div>
+    <div class="skill"><i class="fa fa-search"></i><br>SIEM</div>
+    <div class="skill"><i class="fa fa-network-wired"></i><br>Networking</div>
+    <div class="skill"><i class="fa fa-wifi"></i><br>Wireshark</div>
+    <div class="skill"><i class="fa fa-bug"></i><br>IR</div>
+    <div class="skill"><i class="fa fa-code"></i><br>OWASP</div>
+  </div>
 </section>
 
 <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects-grid">
-        <div class="card">
-            <h3>Phishing Awareness Lab</h3>
-            <p>Analyzed phishing emails, extracted indicators, and documented tactics for SOC detection.</p>
-        </div>
-        <div class="card">
-            <h3>Wireshark Traffic Capture</h3>
-            <p>Captured and identified suspicious network packets to understand threat patterns.</p>
-        </div>
-    </div>
-</section>
-
-<section id="certifications">
-    <h2>Certifications & Training</h2>
+  <h2>Projects</h2>
+  <div class="cards">
     <div class="card">
-        <ul>
-            <li>Intro to Cybersecurity – Cisco</li>
-            <li>Network Security Fundamentals</li>
-            <li>SIEM & SOC Labs</li>
-            <li>OWASP Top 10 Web Security</li>
-        </ul>
+      <h3>Phishing Awareness Project</h3>
+      <p>Analyzed phishing techniques and documented IOCs and prevention strategies.</p>
     </div>
+    <div class="card">
+      <h3>Wireshark Traffic Analysis</h3>
+      <p>Captured and analyzed suspicious traffic patterns and protocols.</p>
+    </div>
+  </div>
 </section>
 
 <section id="contact">
-    <h2>Contact</h2>
-    <div class="contact-info">
-        <p>Email: yourmail@example.com</p>
-        <p>GitHub: <a href="https://github.com/DamodarMadival88" target="_blank">github.com/DamodarMadival88</a></p>
-        <p>Location: Vasco, Goa</p>
-    </div>
+  <h2>Contact</h2>
+  <p>Email: yourmail@example.com</p>
+  <p>GitHub: <a href="https://github.com/DamodarMadival88">DamodarMadival88</a></p>
+  <p>Location: Vasco, Goa</p>
 </section>
 
 <footer>
-    © 2025 Damodar Madival – SOC Analyst Portfolio
+  © 2025 Damodar Madival | SOC Analyst Portfolio
 </footer>
+
+<script>
+function toggleTheme(){
+  document.body.classList.toggle("dark");
+}
+
+function toggleMenu(){
+  const nav=document.getElementById("navLinks");
+  nav.style.display = nav.style.display==="flex" ? "none":"flex";
+}
+
+const sections=document.querySelectorAll("section");
+window.addEventListener("scroll",()=>{
+  sections.forEach(sec=>{
+    if(sec.getBoundingClientRect().top < window.innerHeight-100){
+      sec.classList.add("show");
+    }
+  });
+});
+</script>
 
 </body>
 </html>
